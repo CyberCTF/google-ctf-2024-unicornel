@@ -4,12 +4,5 @@
   "question": "Retrieve the flag from the challenge service.",
   "category": "PWN",
   "difficulty": 4,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "emulator-escape",
-    "unicorn-engine",
-    "syscalls",
-    "binary-exploitation",
-    "assembly"
-  ]
+  "evidence_kind": "SECRET"
 }
