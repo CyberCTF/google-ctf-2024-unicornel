@@ -3,6 +3,6 @@
   "description": "A multi-process emulator built on the Unicorn engine, with its own syscalls. The task is to escape it.",
   "question": "Retrieve the flag from the challenge service.",
   "category": "PWN",
-  "difficulty": 4,
+  "difficulty": 3,
   "evidence_kind": "SECRET"
 }
