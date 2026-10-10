@@ -1,0 +1,58 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Escape the emulated processes and read /flag on the host side of the emulator.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "CTF{%s}"
+      },
+      "dev": "CTF{dev-google-ctf-2024-unicornel}",
+      "hints": [
+        "The emulator implements its own system calls.",
+        "Read them for a shared resource whose lifetime is not tracked correctly."
+      ],
+      "steps": [
+        {
+          "key": "engine",
+          "title": "Identify the engine",
+          "prompt": "Which CPU emulation framework runs the processes?",
+          "check": {
+            "answer": [
+              "unicorn",
+              "unicorn engine",
+              "unicorn-engine"
+            ]
+          }
+        },
+        {
+          "key": "resource",
+          "title": "Find the shared resource",
+          "prompt": "What kind of resource can processes share through the custom syscalls?",
+          "check": {
+            "answer": [
+              "shared buffer",
+              "shared buffers",
+              "shared memory",
+              "shared mapping",
+              "memory"
+            ]
+          }
+        },
+        {
+          "key": "bug",
+          "title": "Name the bug class",
+          "prompt": "What memory-safety bug class follows from a wrong reference count?",
+          "check": {
+            "answer": [
+              "use-after-free",
+              "use after free",
+              "uaf"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
