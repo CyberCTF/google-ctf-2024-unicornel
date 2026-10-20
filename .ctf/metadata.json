@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-google-ctf-2024-unicornel",
+  "slug": "google-ctf-2024-unicornel",
   "title": "Google CTF 2024: Unicornel",
   "description": "A multi-process emulator built on the Unicorn engine, with its own syscalls. The task is to escape it.",
-  "question": "Exploit the emulator's syscalls to escape it and read /flag.",
-  "category": "PWN",
+  "category": "pwn",
   "difficulty": 3,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Exploit the emulator's syscalls to escape it and read /flag."
 }
